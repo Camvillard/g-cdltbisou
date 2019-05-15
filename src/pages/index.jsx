@@ -9,11 +9,19 @@ import '../styles/main.scss';
 
 const IndexPage = ({data}) => {
   return (
-    <div>
+    <div id="home-content">
       <SEO id="homepage" title="Home" keywords={data.site.siteMetadata.seo} />
-      <Header siteTitle={data.site.siteMetadata.title} path="homepage" />
-      <Link to="/contact">contact</Link>
-      <h1>todo prout</h1>
+      <div id="header-contact">
+        <Link to="/contact">contact</Link>
+      </div>
+      <h1>cdltbisou</h1>
+      <div id="brand-title">
+        <h3>web + créa <span class="accent-title"> + et caetera</span></h3>
+      </div>
+      <div id="brand-infos">
+        <h5>soon.</h5>
+        <h5 class="accent-title">en attendant, soyez polis.</h5>
+      </div>
     </div>
   )
 }
