@@ -1,0 +1,193 @@
+/* ------ PAGES : CONTACT ------ */
+
+#messages-new {
+  min-height: 100vh;
+}
+
+#contact-back {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  left: 10px;
+  width: 120px;
+  height: 50px;
+
+
+  a.btn-back-home span {
+    transition: all 0.3s ease;
+    color: $teal-blue;
+  }
+
+  span.link-text {
+    position: absolute;
+    left: 40%;
+    top: 0;
+  }
+
+  a:hover span.link-text{
+    transform: translateX(25%);
+    color: $golden-taupe;
+  }
+
+  a:hover #arrow-stroke-contact {
+    fill: $golden-taupe;
+    stroke: $golden-taupe;
+  }
+}
+
+
+#arrow-stroke-contact {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  fill: white;
+  stroke: $teal-blue;
+  width: 70px;
+  transition: all 0.3s ease;
+}
+
+#contact-content {
+  background: $teal-blue;
+  // min-height: 90vh;
+  padding: 10px 20px 40px;
+}
+
+#contact-form {
+    width: 80%;
+    margin: auto;
+    font-family: $accent-font;
+
+  ::placeholder {
+    color: white;
+    font-size: 1.8rem;
+  }
+
+  label {
+    display: inline-block;
+    color: white;
+    font-size: 1.8rem;
+    text-transform: lowercase;
+  }
+
+  input,
+  textarea {
+    display: inline-block;
+    color: white;
+    background: $teal-blue;
+    font-size: 1.8rem;
+    @include hr-thin(white);
+    padding-bottom: 3px;
+    padding-top: 5px;
+  }
+
+  input {
+    height: 2.4rem;
+    margin: 2.2rem auto 2.2rem 4px;
+  }
+
+  textarea {
+    margin: 0.5rem auto 2.2rem;
+    height: 6.8rem;
+  }
+
+  input:hover,
+  input:active,
+  input:visited,
+  input:focus,
+  textarea:hover,
+  textarea:active,
+  textarea:visited,
+  textarea:focus {
+    transition: all 0.3s ease-in-out;
+    background: $golden-taupe;
+    @include hr-thin(transparent);
+  }
+
+  .text label {
+    margin: 2.2rem auto 0px;
+  }
+
+  button {
+    color: $dark-blue;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+
+  button::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 3px;
+    background: $dark-blue;
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
+
+  button:hover {
+    color: white;
+    &::before {
+    transform: translateX(110px);
+    background: white;
+      // transform: scaleX(50);
+      // width: 100%;
+    }
+  }
+
+} // end of #contact form
+
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+  #messages-new {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: space-between;
+    min-height: 100vh;
+    padding-left: 14vw;
+  }
+
+
+  #contact-back {
+    margin-bottom: 60px;
+  }
+
+  #contact-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 15vh);
+    padding-bottom: 20px;
+  }
+
+  #contact-header {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    margin-left: -50px;
+    margin-top: -12rem;
+    h1 {
+      font-size: 10rem;
+    }
+    h6 {
+      // width: 30%;
+      margin-left: 0;
+    }
+  }
+
+  #contact-form {
+    grid-column: 5 / 11;
+    grid-row: 3 / 5;
+  }
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+
+} // end of hg-screen - 1440px

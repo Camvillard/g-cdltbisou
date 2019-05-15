@@ -1,0 +1,28 @@
+/* ------ VARIABLES : FONTS ------ */
+
+
+// import all files here
+@import url("https://use.typekit.net/zhb5abj.css");
+
+
+$body-font: 'Filson Pro', sans-serif;
+$headers-font: 'Filson Pro', sans-serif;
+$accent-font: 'interstate-mono', monospace;
+
+$font-weight-light: 300; //interstate and filson
+$font-weight-regular: 400; //filson
+$font-weight-semibold: 700; //interstate
+$font-weight-bold: 800; //filson
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
