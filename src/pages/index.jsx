@@ -12,15 +12,15 @@ const IndexPage = ({data}) => {
     <div id="home-content">
       <SEO id="homepage" title="Home" keywords={data.site.siteMetadata.seo} />
       <div id="header-contact">
-        <Link to="/contact">contact</Link>
+        <Link to="/contact-us">contact</Link>
       </div>
       <h1>cdltbisou</h1>
       <div id="brand-title">
-        <h3>web + créa <span class="accent-title"> + et caetera</span></h3>
+        <h3>web + créa <span className="accent-title"> + et caetera</span></h3>
       </div>
       <div id="brand-infos">
         <h5>soon.</h5>
-        <h5 class="accent-title">en attendant, soyez polis.</h5>
+        <h5 className="accent-title">en attendant, soyez polis.</h5>
       </div>
     </div>
   )

@@ -10,7 +10,7 @@ const Contact = () => (
 
     <div id="contact-back">
       <Link to="/">
-        <span class="link-text">retour</span>
+        <span className="link-text">retour</span>
         <svg id="arrow-stroke-contact" viewBox="0 0 136 70" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M1 35L40.3046 1L46.243 8.96602L22.0525 29.8917L135 29.8917V40.1083H22.0525L46.243 61.034L40.3046 69L1 35Z"/>
         </svg>
@@ -52,14 +52,5 @@ const Contact = () => (
   </div>
 )
 
-// export default Contact;
-
-
-
-
-
-
-
-
-
+export default Contact;
 
