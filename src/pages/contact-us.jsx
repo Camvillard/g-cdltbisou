@@ -27,20 +27,29 @@ const Contact = () => (
       </div>
 
       <div id="contact-form">
-        <form action="/merci">
-        <label htmlFor="emailAddress">adresse mail :
-          <input name="emailAdress" type="email"/>
-        </label>
+        <form
+          action="/merci"
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field">
 
-        <label htmlFor="fullName">nom & prénom :
-          <input name="fullName" type="text"/>
-        </label>
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
 
-        <label htmlFor="message">message :
-          <textarea name="message"/>
-        </label>
+          <label htmlFor="emailAddress">adresse mail :
+            <input name="emailAdress" type="email"/>
+          </label>
 
-        <button type="submit">envoyer</button>
+          <label htmlFor="fullName">nom & prénom :
+            <input name="fullName" type="text"/>
+          </label>
+
+          <label htmlFor="message">message :
+            <textarea name="message"/>
+          </label>
+
+          <button type="submit">envoyer</button>
 
 
         </form>
