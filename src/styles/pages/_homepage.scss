@@ -4,16 +4,28 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // align-items: center;
   width: 100vw;
   height: 100vh;
   padding-left: 5vw;
 }
 
 #brand-title {
-  width: 75vw;
+  width: 80vw;
   margin-top: 40vh;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  .cdlt {
+    font-weight: 800;
+  }
+
+  .bisou {
+    font-weight: 300;
+  }
+
   h3 {
     font-size: 2rem;
     margin: 2rem auto;
@@ -42,6 +54,16 @@
 }
 
 @media (min-width: $sm-screen) {
+  #brand-title {
+    margin-top: 30vh;
+    width: 55vw;
+    h1 {
+      font-size: 10rem;
+    }
+    h3 {
+      font-size: 3rem;
+    }
+  }
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
@@ -49,7 +71,12 @@
 
 @media (min-width: $lg-screen) {
   #brand-title {
-    width: 40vw;
+    width: 45vw;
+    margin-bottom: 80px;
+
+    h1 {
+      font-size: 14rem;
+    }
     h3 {
       font-size: 3.4rem;
     }

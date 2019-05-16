@@ -14,8 +14,8 @@ const IndexPage = ({data}) => {
       <div id="header-contact">
         <Link to="/contact-us">contact</Link>
       </div>
-      <h1>cdltbisou</h1>
       <div id="brand-title">
+        <h1><span className="cdlt">cdlt</span><span className="bisou">bisou</span></h1>
         <h3>web + créa <span className="accent-title"> + et caetera</span></h3>
       </div>
       <div id="brand-infos">
