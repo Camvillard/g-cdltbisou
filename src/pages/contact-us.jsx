@@ -27,7 +27,7 @@ const Contact = () => (
       </div>
 
       <div id="contact-form">
-        <form action="">
+        <form action="/merci">
         <label htmlFor="emailAddress">adresse mail :
           <input name="emailAdress" type="email"/>
         </label>
