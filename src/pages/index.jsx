@@ -1,8 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
-import Header from "../components/header";
-// import Image from "../components/Image";
 import SEO from "../components/seo";
 
 import '../styles/main.scss';

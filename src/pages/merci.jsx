@@ -1,11 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 // styles
-import "../styles/mains.scss"
+import "../styles/main.scss"
 
 const Merci = () => (
   <div>
@@ -18,7 +17,7 @@ const Merci = () => (
       </div>
 
       <div id="merci-more">
-        <p className="accent-text">si toutefois d'ici là vous cherchez une occupation, <a href="https://drive.google.com/file/d/1isU3OCUqgx3CQlfwsgonA6-K6At9l1MT/view?usp=sharing" target="_blank">voici la recette des meilleurs scones du monde.</a> faites-en bon usage.</p>
+        <p className="accent-text">si toutefois d'ici là vous cherchez une occupation, <a href="https://drive.google.com/file/d/1isU3OCUqgx3CQlfwsgonA6-K6At9l1MT/view?usp=sharing" target="_blank" rel="noopener noreferrer">voici la recette des meilleurs scones du monde.</a> faites-en bon usage.</p>
       </div>
     </div>
 
