@@ -4,6 +4,9 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+// styles
+import "../styles/mains.scss"
+
 const Merci = () => (
   <div>
     <div id="merci-content">

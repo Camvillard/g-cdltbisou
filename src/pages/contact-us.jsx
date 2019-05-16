@@ -1,8 +1,16 @@
+// external libs
 import React from "react"
 import { Link } from "gatsby"
 
+// components
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+// internal data
+
+// styles
+import "../styles/mains.scss"
+
 
 const Contact = () => (
   <div id="contact-page">
