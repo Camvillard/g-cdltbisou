@@ -13,7 +13,7 @@ import "../styles/main.scss"
 
 const Contact = () => (
   <div id="contact-page">
-    <SEO title="Page two" id="contact" />
+    <SEO title="contact" id="contact" />
 
     <div id="contact-back">
       <Link to="/">
