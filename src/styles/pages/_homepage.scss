@@ -6,13 +6,13 @@
   justify-content: space-between;
   width: 100vw;
   height: 100vh;
-  padding-left: 5vw;
 }
 
 #brand-title {
   width: 80vw;
   margin-top: 40vh;
   margin-bottom: 20px;
+  padding-left: 5vw;
 
   h1 {
     font-size: 6rem;
@@ -33,6 +33,7 @@
 }
 
 #brand-infos {
+  padding-left: 5vw;
   h5 {
     font-size: 1.8rem;
     margin: 0.4rem auto;

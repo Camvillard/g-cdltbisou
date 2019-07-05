@@ -1,12 +1,12 @@
-/* ------ INDEX : COMPONENTS ------ */
+/* ------ UTILITIES : ALIGNEMENTS ------ */
 
-
-@import "mixins/index";
-@import "buttons";
-@import "forms";
-@import "footer";
-@import "navigation";
-@import "navbar";
+ul.list-inline {
+  list-style: none;
+  padding-inline-start: 0;
+  li {
+    display: inline-block;
+  }
+}
 
 
 @media (min-width: $sm-screen) {

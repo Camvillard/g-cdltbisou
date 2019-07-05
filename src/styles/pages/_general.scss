@@ -2,6 +2,10 @@
 
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -66,7 +70,7 @@ h6 {
 }
 
 
-p, a {
+p, a, li {
   font-size: 1.4rem;
 }
 
@@ -134,7 +138,7 @@ a {
     margin: 3.8rem auto 1.8rem;
   }
 
-  p, a {
+  p, a, li {
     font-size: 1.6rem;
   }
 
