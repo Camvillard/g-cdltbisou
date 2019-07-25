@@ -1,5 +1,6 @@
 // external stuff
 import React from "react"
+import {Link} from "gatsby"
 
 // components
 
@@ -29,23 +30,51 @@ class Navbar extends React.Component {
   render() {
 
     return(
-      <div id="navbar">
+      <React.Fragment>
+        <div id="navbar">
 
-      <div id="main-menu" className={`${this.state.menu ? 'open-menu' : 'hide-menu'}`}>
-        menu
+          {/* handles menu opening */}
+          <p className={`navbar-link toggle-menu ${this.state.menu ? 'close' : 'open'}`} data-open="menu" onClick={this.handleClick}>
+            {`${this.state.menu ? 'fermer' : 'menu'}`}
+          </p>
 
-      </div>
+          {/* handles search opening */}
+          <p className={`navbar-link toggle-search ${this.state.search ? 'close' : 'open'}`} data-open="search" onClick={this.handleClick}>
+            {`${this.state.search ? 'fermer' : 'chercher'}`}
+          </p>
 
-      <div id="nav-search" className={`${this.state.search ? 'open-search' : 'hide-search'}`}>
-        search
-      </div>
+        </div>
 
-      <ul className="list-inline">
-        <li className="navbar-link" data-open="menu" onClick={this.handleClick}>menu</li>
-        <li className="navbar-link" data-open="search" onClick={this.handleClick}>search</li>
-      </ul>
+        <div id="inner-nav">
+          <div id="main-menu" className={`${this.state.menu ? 'open-menu' : 'hide-menu'}`}>
+            <ul className="list-fullwidth">
+              <li className="item-white">
+                <Link to="/">_voir les projets,</Link>
+              </li>
+              <li className="item-white">
+                <Link to="/contact-us">_contact,</Link>
+              </li>
+              <li className="item-white">
+                <Link to="/">_à propos,</Link>
+              </li>
+              <li className="item-white">
+                <Link to="/">_shop,</Link>
+              </li>
+              <li className="item-white">
+                <Link to="/">_bucket list.</Link>
+              </li>
+            </ul>
+          </div>
 
-      </div>
+          <div id="nav-search" className={`${this.state.search ? 'open-search' : 'hide-search'}`}>
+            search
+          </div>
+        </div>
+
+
+
+      </React.Fragment>
+
     )
   }
 }
