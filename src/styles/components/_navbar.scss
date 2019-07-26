@@ -1,65 +1,239 @@
 /* ------ COMPONENTS : NAVBAR ------ */
 
-#navbar {
-  width: 100vw;
-  position: fixed;
-  top: 8px;
-  left: 0;
-  display: flex;
-  justify-content: space-around;
 
+@media (max-width: 767px) {
   .navbar-link {
-    border: 3px solid red;
-    width: 120px;
-    color: $golden-taupe;
+    width: 100%;
     text-transform: uppercase;
     font-family: $accent-font;
     font-size: 1.2rem;
+    text-align: center;
+    position: fixed;
+    z-index: 9000;
+
+    span {
+      background: white;
+    }
   }
 
-  .navbar-link:first-child {
-    text-align:  right;
-    // border-right: 1px solid $golden-taupe;
-    // padding-right: 8px;
+  .navbar-link.open {
+    color: $golden-taupe;
   }
 
-  .navbar-link:last-child {
-    // padding-left: 8px;
+  .navbar-link.close {
+    color: $dark-blue;
+    z-index: 9000;
   }
-}
+
+  .toggle-menu {
+    top: 0;
+    left: 0;
+  }
+
+  .toggle-search {
+    bottom: 0;
+    left: 0;
+  }
+
+  #inner-nav {
+    transition: all 0.4s ease;
+  }
 
 
-.hide-menu,
-.hide-search {
-  width: 0;
-  display: none;
-}
+  #main-menu {
+    transition: all 0.4s ease;
+    background: $golden-taupe;
+    position: fixed;
+    z-index: 8000;
+  }
 
-.open-menu{
-  height: 90vh;
-  width: 50vw;
-  position: fixed;
-  left: 0;
-  bottom:0;
-  display: flex;
+  #main-menu.hide-menu,
+  #nav-search.hide-search  {
+    display: none;
+    height: 0vh;
+    width: 100vw;
+    opacity: 0;
+  }
+
+
+  .open-menu {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+  }
+
+  .open-search {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+  }
+} // end of sm-screen - 768px
+
+#nav-search.open-search {
   background: $golden-taupe;
+  position: fixed;
+  z-index: 8000;
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .search-box {
+    position: relative;
+    width: 92%;
+    margin: auto;
+  }
+
+  .search-box p {
+    position: absolute;
+    transition: all 0.4s;
+  }
+
+  .search-box p.hide-label {
+    top: 10px;
+    left: 0;
+  }
+
+  .search-box p.show-label {
+    top: -30px;
+    left: 0;
+  }
+
+
+  input.input-stroked{
+    background: $golden-taupe;
+    position: relative;
+    top:  0;
+    left: 0;
+    width: 92%;
+    // margin: auto;
+    line-height: 1;
+    font-size: 4rem;
+    border-bottom: 4px solid white;
+    padding-bottom: 8px;
+
+    &:hover {
+      background: white;
+      color: $dark-blue;
+      outline: 2px solid white;
+
+      &::placeholder {
+        color: $golden-taupe;
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      background: white;
+      color: $dark-blue;
+      outline: 2px solid white;
+
+      &::placeholder {
+        color: white;
+        opacity: 1;
+      }
+    }
+  }
+
+
+
+
 }
 
-.open-search{
-  height: 90vh;
-  width: 50vw;
-  position: fixed;
-  right: 0;
-  bottom:0;
-  display: flex;
-  background: $golden-taupe;
-}
 
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
+
+  #navbar {
+    width: 100vw;
+    position: fixed;
+    z-index: 10000;
+    top: 8px;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .navbar-link {
+    width: 50%;
+    text-transform: uppercase;
+    font-family: $accent-font;
+    font-size: 1.2rem;
+    position: fixed;
+    z-index: 6000;
+    top: 0;
+
+    span {
+      background: white;
+    }
+  }
+
+  .navbar-link.open {
+    color: $golden-taupe;
+  }
+
+  .navbar-link.close {
+    color: $dark-blue;
+    z-index: 9000;
+  }
+
+
+  .hide-menu,
+  .hide-search {
+    height: 0vh;
+    width: 100vw;
+    display: none;
+  }
+
+  .toggle-menu {
+    text-align: right;
+    border-right: 1px solid $golden-taupe;
+    padding-right: 4px;
+    left: 0;
+  }
+
+  .toggle-search {
+    padding-left: 4px;
+    right: 0;
+  }
+
+  #main-menu {
+    transition: all 0.4s ease;
+    background: $golden-taupe;
+    position: fixed;
+    z-index: 8000;
+  }
+
+  #nav-search {
+    background: $golden-taupe;
+    position: fixed;
+    z-index: 8000;
+  }
+
+  .open-menu{
+    height: 100vh;
+    width: 50vw;
+    top:  0;
+    left: 0;
+    display: flex;
+  }
+
+  .open-search{
+    height: 100vh;
+    width: 50vw;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    background: $golden-taupe;
+  }
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
