@@ -36,6 +36,15 @@ module.exports = {
         icon: `src/images/cdltbisou-logo.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/ // See below to configure properly
+        }
+      }
+    },
+
     // enables Progressive Web App + Offline functionality
     `gatsby-plugin-offline`,
   ],

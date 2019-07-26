@@ -8,6 +8,8 @@ import Sidebar from "../components/sidebar";
 import Navbar from "../components/navbar";
 
 // assets & helpers
+import Cdltbisou from "../images/cdltbisou.svg";
+import Etcaetera from "../images/tagline.svg";
 
 // style
 import '../styles/main.scss';
@@ -20,8 +22,8 @@ const IndexPage = ({data}) => {
       <Navbar />
 
       <div id="brand-title">
-        <h1><span className="cdlt">cdlt</span><span className="bisou">bisou</span></h1>
-        <h3>web + créa <span className="accent-title"> + et caetera</span></h3>
+        <Cdltbisou />
+        <Etcaetera />
       </div>
 
       <div id="brand-infos">
