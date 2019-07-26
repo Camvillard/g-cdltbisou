@@ -1,8 +1,16 @@
+// external stuff
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby";
 
+// components
+import SEO from "../components/seo";
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Navbar from "../components/navbar";
+
+// assets & helpers
+
+// style
+import '../styles/main.scss';
 
 const AboutPage = () => (
   <Layout>

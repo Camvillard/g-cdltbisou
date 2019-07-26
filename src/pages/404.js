@@ -1,7 +1,16 @@
+// external stuff
 import React from "react"
+import { Link, graphql } from "gatsby";
 
+// components
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/seo";
+import Navbar from "../components/navbar";
+
+// assets & helpers
+
+// style
+import '../styles/main.scss';
 
 const NotFoundPage = () => (
   <Layout>

@@ -5,11 +5,23 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
+// external stuff
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
 
+// components
 import Header from "./header"
+import SEO from "../components/seo";
+import Navbar from "../components/navbar";
+import Sidebar from "../components/sidebar";
+import Footer from "../components/footer";
+
+
+// assets & helpers
+
+// style
+import '../styles/main.scss';
 
 
 const Layout = ({ children }) => (
@@ -27,12 +39,9 @@ const Layout = ({ children }) => (
       <div>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>
+          <Sidebar />
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Footer />
         </div>
       </div>
     )}

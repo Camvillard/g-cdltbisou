@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 
 // components
 import SEO from "../components/seo";
+import Sidebar from "../components/sidebar";
 import Navbar from "../components/navbar";
 
 // assets & helpers
@@ -15,6 +16,7 @@ const IndexPage = ({data}) => {
   return (
     <div id="home-content">
       <SEO id="homepage" title="Home" keywords={data.site.siteMetadata.seo} />
+      <Sidebar />
       <Navbar />
 
       <div id="brand-title">

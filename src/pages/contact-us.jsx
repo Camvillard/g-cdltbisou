@@ -11,6 +11,8 @@ import SEO from "../components/seo"
 import "../styles/main.scss"
 
 
+
+
 const Contact = () => (
   <div id="contact-page">
     <SEO title="contact" id="contact" />

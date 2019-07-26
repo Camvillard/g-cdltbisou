@@ -1,0 +1,48 @@
+/* ------ COMPONENTS : SIDEBAR ------ */
+
+#sidebar-nav {
+  position: fixed;
+  width: 2.8rem;
+  height: 100vh;
+  // border: 3px solid red;
+  top: 124px;
+  left: 0;
+
+  .list-inline{
+    transform: rotate(-90deg);
+    position: absolute;
+    transform-origin: center;
+  }
+
+  .list-item-accent:first-child {
+    margin: 0 48px 0 0;
+  }
+
+
+  .list-item-accent {
+    margin: 0 16px 0 0;
+  }
+
+  .list-item-accent a{
+    color: $golden-taupe;
+    font-size: 1rem;
+  }
+
+
+
+
+
+
+}
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
