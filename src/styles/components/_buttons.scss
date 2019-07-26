@@ -8,14 +8,46 @@
 */
 
 
-// 1. general styles for buttons
+// 1. simple button
 
-button {
-  background-color: $teal-blue;
+
+button.btn-line,
+a.btn-line {
+  background-color: none;
   border: none;
   border-radius: 0px;
   color: white;
   font-size: 2rem;
+  display: block;
+  color: $dark-blue;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 10;
+  padding-left: 4px;
+}
+
+button.btn-line::before,
+a.btn-line::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 2px;
+  background: $dark-blue;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+button.btn-line:hover,
+a.btn-line:hover {
+  color: red;
+  &::before {
+  transform: translateX(110px);
+  background: red;
+    // transform: scaleX(50);
+    // width: 100%;
+  }
 }
 
 // 2. back home buttons

@@ -1,0 +1,63 @@
+/* ------ LAYOUTS : PROJECTS ------ */
+
+.project {
+
+}
+
+.project-infos-content {
+  background: rgba(151, 196, 191, 0.2);
+
+  h6 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: $golden-taupe;
+  }
+
+  p {
+    color: $gray-blue;
+    font-family:  $accent-font;
+    font-weight: $font-weight-light;
+  }
+}
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+  .project-infos-content {
+    width: 600px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    #close-info-toggle {
+      grid-column: 1 / 6;
+    }
+
+    .info-year {
+      grid-column: 1 span 6;
+    }
+
+    .info-skills {
+      border: 1px solid green;
+      grid-column: 1 / span 6;
+    }
+
+    .info-description {
+      grid-column: 1 / span 6;
+      border: 1px solid red;
+    }
+
+    h6 {
+
+    }
+  }
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

@@ -7,12 +7,14 @@
 
 $body-font: 'objektiv-mk1', sans-serif;
 $headers-font: 'objektiv-mk1', sans-serif;
-$accent-font: 'interstate-mono', monospace;
+$accent-font: 'roboto-mono', monospace;
 
-$font-weight-light: 300; //interstate and objektiv
-$font-weight-regular: 400; //objektiv
-$font-weight-semibold: 700; //interstate
+$font-weight-light: 300; //objektiv, roboto
+$font-weight-regular: 400; // roboto
+$font-weight-medium: 500; //
+$font-weight-semibold: 700; //objektiv
 $font-weight-bold: 800; //objektiv
+
 
 
 @media (min-width: $sm-screen) {

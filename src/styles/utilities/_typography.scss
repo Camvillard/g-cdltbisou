@@ -1,69 +1,44 @@
-/* ------ LAYOUTS : GENERAL ------ */
-
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%;
-  // cursor: url('../images/cdltbisou_cursor-1.svg'), auto;
-  // cursor: -webkit-image-set(url("../images/cdltbisou_cursor-1.svg") 1x, url("../images/cdltbisou_cursor-1@2x.svg") 2x) 0 0, pointer;
-}
-
-body {
-  font-size: 62.5%;
-  color: $gray-blue;
-  font-family: $body-font;
-  line-height: 1.25;
-}
+/* ------ UTILITIES  : TYPOGRAPHY ------ */
 
 h1, h2, h3, h4, h5, h6 {
   color: $dark-blue;
+  margin: .8em auto .4em;
 }
 
-h1, h2, h5 {
+h1, h2, h3, h4 {
   font-family: $headers-font;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semibold;
 }
 
-h4, h6 {
+h5, h6 {
   font-weight: $font-weight-light;
   font-family: $accent-font;
 }
 
 h1 {
-  font-size: 6.2rem;
-  margin: 4.6rem auto 2.4rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 5.2rem;
-  margin: 4.6rem auto 2.4rem;
+  font-size: 3.6rem;
 }
 
 h3 {
-  font-size: 4.2rem;
-  font-family: $accent-font;
-  font-weight: $font-weight-semibold;
-  margin: 3.4rem auto 1.6rem;
+  font-size: 3.2rem;
 }
 
 h4 {
-  font-size: 2.6rem;
-  font-family: $accent-font;
-  text-transform: uppercase;
-  margin: 3.4rem auto 1.6rem;
+  font-weight: $font-weight-light;
+  font-size: 3rem;
 }
 
 h5 {
   font-size: 2.6rem;
-  margin: 3.4rem auto 1.6rem;
 }
 
 h6 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-family: $accent-font;
-  margin: 3.4rem auto 1.6rem;
 }
 
 .accent-title {
@@ -74,6 +49,25 @@ h6 {
 
 p, a, li {
   font-size: 1.4rem;
+}
+
+blockquote {
+  font-family: $accent-font !important;
+  color: $teal-blue;
+  font-size: 1.4rem;
+  width: 84%;
+  margin: 1em auto;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: -0.6em;
+    left: -0.6em;
+    opacity: 0.2;
+    transform: rotate(8deg);
+    transform-origin: center;
+    content:"«";
+    font-size: 4rem;
+  }
 }
 
 .accent-text {
@@ -98,10 +92,6 @@ a {
   }
 }
 
-::selection {
-  background:$teal-blue;
-}
-
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
@@ -112,32 +102,32 @@ a {
 @media (min-width: $lg-screen) {
   h1 {
     font-size: 8rem;
-    margin: 5.2rem auto 2.2rem;
+
   }
 
   h2 {
     font-size: 6.4rem;
-    margin: 5.6rem auto 2.2rem;
+
   }
 
   h3 {
     font-size: 4.8rem;
-    margin: 4.2rem auto 2rem;
+
   }
 
   h4 {
     font-size: 3.2rem;
-    margin: 3.8rem auto 1.8rem;
+
   }
 
   h5 {
     font-size: 3.2rem;
-    margin: 3.8rem auto 1.8rem;
+
   }
 
   h6 {
     font-size: 2.8rem;
-    margin: 3.8rem auto 1.8rem;
+
   }
 
   p, a, li {
@@ -147,7 +137,13 @@ a {
   .accent-text {
     font-size: 1.5rem;
   }
+
+  blockquote {
+    font-size: 1.6rem;
+    width: 66%;
+  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {
 } // end of hg-screen - 1440px
+
