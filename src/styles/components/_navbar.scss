@@ -73,7 +73,7 @@
   }
 } // end of sm-screen - 768px
 
-#nav-search {
+#nav-search.open-search {
   background: $golden-taupe;
   position: fixed;
   z-index: 8000;
@@ -81,11 +81,10 @@
   // flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
 
   .search-box {
     position: relative;
-    width: 90vw;
+    width: 92%;
     margin: auto;
   }
 
