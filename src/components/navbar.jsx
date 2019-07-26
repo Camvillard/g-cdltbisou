@@ -14,17 +14,26 @@ class Navbar extends React.Component {
     super(props)
     this.state = {
       menu: false,
-      search: false
+      search: false,
+      showLabel: false
     }
-  }
+  };
 
   handleClick = (e) => {
     const target = e.target.dataset.open
     target === 'menu' ?
       this.setState({menu: !this.state.menu}) :
       this.setState({search: !this.state.search})
+  };
 
+  toggleLabel = () => {
+    this.setState({
+      showLabel: !this.state.showLabel
+    })
+  };
 
+  handleChange = (e) => {
+    // to do
   }
 
   render() {
@@ -67,7 +76,18 @@ class Navbar extends React.Component {
           </div>
 
           <div id="nav-search" className={`${this.state.search ? 'open-search' : 'hide-search'}`}>
-            search
+          <div className="search-box">
+            <p className={`${this.state.showLabel ? 'show-label' : 'hide-label'}`}>chercher</p>
+
+            <input
+              type="text"
+              placeholder="chercher"
+              className="input-stroked"
+              onClick={this.toggleLabel}
+              onChange={this.handleChange}
+              />
+
+          </div>
           </div>
         </div>
 
