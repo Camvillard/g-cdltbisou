@@ -21,35 +21,22 @@
     text-transform: uppercase
   }
 
-  // .hidden-infos .toggle-infos {
-  // }
-
-  // .visible-infos .toggle-infos {
-  //   // bottom: 280px;
-  //   color: $dark-blue;
-  //   font-size: 1.4rem;
-  //   padding: 4px 12px;
-  // }
-
   .hidden-infos {
     .project-infos-content {
       height: 0;
       overflow: hidden;
-      transition: 0.6s;
       background: $teal-blue;
     }
   }
 
   .project-infos-content {
-    height: 280px;
-    align-content: start;
+    height: 282px;
     background: $teal-blue;
     padding: 0 2vw;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     align-content: stretch;
-    transition: 0.6s;
 
     .info-section {
       align-self: center;
@@ -98,20 +85,37 @@
     }
 
     p {
+      font-size: 1.25rem;
       color: $dark-blue;
       font-weight: $font-weight-light;
     }
   }
 
-  .visible-infos {
-
-
-
-  }
 
 
 } // end of max width
 
+.project-infos-content {
+  background: $teal-blue;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  align-content: stretch;
+  transition: 0.8s;
+  h6, a {
+    font-family: $accent-font;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+  }
+
+  p {
+    color: $dark-blue;
+    font-weight: $font-weight-light;
+  }
+
+}
 .project-header {
   img {
     margin-top: -$spacer-lg;
@@ -140,8 +144,6 @@
     font-size: 1rem;
   }
 }
-
-
 
 
 .project-content {
@@ -174,7 +176,7 @@
 
   .project-background {
     position: relative;
-    z-index: 300;
+    z-index: 30000;
     width: 100vw;
     height: 100vh;
     background: $dark-blue;
@@ -284,6 +286,30 @@
     }
 
   }
+
+  .project-sidebar {
+    position: fixed;
+    bottom: 30vh;
+    right:  0;
+    z-index: 20000;
+  }
+
+  .toggle-infos {
+    background: $teal-blue;
+  }
+
+  .hidden-infos {
+    .project-infos-content {
+      width: 0;
+      overflow: hidden;
+    }
+    .toggle-infos {
+      transform: rotate(-90deg);
+    }
+  }
+
+
+
 
   .project-infos-content {
     width: 600px;

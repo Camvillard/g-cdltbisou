@@ -110,7 +110,7 @@ class ProjectTemplate extends React.Component {
 
             <div className="info-description info-section">
               <h6>le projet /</h6>
-              <p>concevoir l’image de marque de la  pâtisserie  esmepim, ainsi que les pièces de communication et  les sites web (vitrine + e-shop)</p>
+              <p>concevoir l’image de marque de la pâtisserie esmepim, ainsi que les pièces de communication et  les sites web (vitrine + e-shop)</p>
             </div>
 
             <div className="info-skills info-section">
