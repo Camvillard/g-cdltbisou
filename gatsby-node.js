@@ -22,7 +22,8 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               path
-              categories
+              skills
+              tools
               featured
             }
           }
@@ -48,7 +49,8 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         // The context data can also be used as
         // arguments to the page GraphQL query.
-          categories: node.categories,
+          skills: node.skills,
+          tools: node.tools,
           featured_image: node.featured
         },
       })

@@ -4,12 +4,8 @@ import { Link, graphql } from "gatsby";
 
 // components
 import SEO from "../components/seo";
-import Sidebar from "../components/sidebar";
-import Navbar from "../components/navbar";
 
 // assets & helpers
-import Cdltbisou from "../images/cdltbisou.svg";
-import Etcaetera from "../images/tagline.svg";
 
 // style
 import '../styles/main.scss';
