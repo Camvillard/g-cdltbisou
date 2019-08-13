@@ -95,7 +95,7 @@ class ProjectTemplate extends React.Component {
     return(
       <React.Fragment>
 
-        {typeof window !== "undefined" && window.innerWidth > 992 && (
+        {typeof window !== "undefined" && window.innerWidth > 1200 && (
           <ProjectOverlay project={{ frontmatter }} />
         )}
 

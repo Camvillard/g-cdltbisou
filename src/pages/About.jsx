@@ -12,14 +12,45 @@ import Navbar from "../components/navbar";
 // style
 import '../styles/main.scss';
 
-const AboutPage = () => (
-  <Layout>
-    <SEO title="About" id="about" />
-    <h1>Hi from the about page</h1>
-    <p>Welcome to about page</p>
-    <Link to="/">Go back to the homepage</Link>
-    <Link to="/contact">Go back to the homepage</Link>
-  </Layout>
-)
+class AboutPage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showDetails: false
+    }
+  };
+
+  revealContent = () => {
+    this.setState({
+      showDetails: !this.state.showDetails
+    })
+  };
+
+  hideContent = () => {
+    this.setState({
+      showDetails: !this.state.showDetails
+    })
+  }
+
+  render() {
+    return(
+      <React.Fragment>
+        <div id="about-page" className="fullwidth-container">
+
+        <div onClick={this.hideContent} className={`${this.state.showDetails ? 'show-details' : 'hide-details'} creative-studio text-anim`}>
+          studio de création
+        </div>
+
+        <div className="fixed-content fullwidth fullheight">
+
+          <p>cdltbisou est un <span className="text-stroked reveal-content" onClick={this.revealContent}>studio de création</span> et une agence de développement web</p>
+        </div>
+
+        </div>
+      </React.Fragment>
+    )
+  }
+}
+
 
 export default AboutPage

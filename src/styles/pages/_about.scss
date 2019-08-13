@@ -1,5 +1,53 @@
 /* ------ PAGES : ABOUT ------ */
 
+#about-page {
+  .fixed-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.show-details {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 400;
+  animation: textAnim ease-in-out 1s forwards;
+}
+
+.hide-details {
+  display: none;
+}
+
+.reveal-content:hover .creative-studio{
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(45,45,45, 0.2);
+  color: blue;
+}
+
+
+
+
+@keyframes textAnim {
+  0% {
+    background: transparent;
+    font-size: 1.6rem;
+  }
+
+  100% {
+    background: red;
+    font-size: 12rem;
+    font-weight: bold;
+  }
+}
 
 
 @media (min-width: $sm-screen) {
@@ -13,3 +61,4 @@
 
 @media (min-width: $hg-screen) {
 } // end of hg-screen - 1440px
+

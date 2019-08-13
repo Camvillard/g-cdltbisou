@@ -92,6 +92,11 @@ a {
   }
 }
 
+.text-stroked {
+  -webkit-text-stroke: 1px red;
+  text-stroke: 1px red;
+}
+
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

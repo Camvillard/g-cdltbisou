@@ -1,6 +1,19 @@
 /* ------ UTILITIES : ALIGNEMENTS ------ */
 
+.fixed-content {
+  position: fixed;
+  top: 0;
+  left: 0;
 
+  &.fullwidth {
+    width: 100%;
+  }
+
+  &.fullheight {
+  border: 1px solid blue;
+    height: 100%;
+  }
+}
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

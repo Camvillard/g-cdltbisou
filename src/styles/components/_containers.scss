@@ -6,6 +6,11 @@
   margin: auto;
 }
 
+.fullwidth-container {
+  width: 100vw;
+  padding: 4vw;
+}
+
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
