@@ -8,44 +8,69 @@
   }
 }
 
-.show-details {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 400;
-  animation: textAnim ease-in-out 1s forwards;
-}
-
 .hide-details {
   display: none;
 }
 
-.reveal-content:hover .creative-studio{
-  display: flex;
-  align-items: center;
-  padding-left: 24px;
+.show-details {
   width: 100vw;
   height: 100vh;
-  background: rgba(45,45,45, 0.2);
-  color: blue;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 400;
+  color: $dark-blue;
+  // here starts the animation
+  animation-name: textAnim;
+  animation-duration: 1.6s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  // animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 180px;
+    right: 15%;
+    animation: drawingLine 1.2s ease 1.6s 1 forwards;
+  }
 }
+
 
 
 
 
 @keyframes textAnim {
   0% {
+    // letter-spacing: -0.25rem;
+    opacity: 0;
     background: transparent;
     font-size: 1.6rem;
   }
 
   100% {
-    background: red;
+    opacity: 1;
+    background: rgba(255,255,255,0.8);
     font-size: 12rem;
     font-weight: bold;
+  }
+}
+
+@keyframes drawingLine {
+  0% {
+    width: 0;
+    height: 4px;
+  }
+
+  100% {
+    width: 70%;
+    height: 4px;
+    background: $dark-blue;
   }
 }
 

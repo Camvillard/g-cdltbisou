@@ -93,8 +93,10 @@ a {
 }
 
 .text-stroked {
-  -webkit-text-stroke: 1px red;
-  text-stroke: 1px red;
+  -webkit-text-stroke: 0.4px red;
+  text-stroke: 0.4px red;
+  -webkit-text-fill-color: white;
+  font-size: 2rem;
 }
 
 

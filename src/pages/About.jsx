@@ -20,30 +20,25 @@ class AboutPage extends React.Component {
     }
   };
 
-  revealContent = () => {
+  toggleContent = () => {
     this.setState({
       showDetails: !this.state.showDetails
     })
   };
 
-  hideContent = () => {
-    this.setState({
-      showDetails: !this.state.showDetails
-    })
-  }
 
   render() {
     return(
       <React.Fragment>
         <div id="about-page" className="fullwidth-container">
 
-        <div onClick={this.hideContent} className={`${this.state.showDetails ? 'show-details' : 'hide-details'} creative-studio text-anim`}>
+        <div onClick={this.toggleContent} className={`${this.state.showDetails ? 'show-details' : 'hide-details'} creative-studio text-anim`}>
           studio de création
         </div>
 
         <div className="fixed-content fullwidth fullheight">
 
-          <p>cdltbisou est un <span className="text-stroked reveal-content" onClick={this.revealContent}>studio de création</span> et une agence de développement web</p>
+          <p>cdltbisou est un <span className="text-stroked reveal-content" onClick={this.toggleContent}>studio de création</span> et une agence de développement web</p>
         </div>
 
         </div>
