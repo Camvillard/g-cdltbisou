@@ -93,10 +93,16 @@ a {
 }
 
 .text-stroked {
-  -webkit-text-stroke: 0.4px red;
-  text-stroke: 0.4px red;
+  -webkit-text-stroke-width: 0.4px;
+  text-stroke-width: 0.4px;
   -webkit-text-fill-color: white;
   font-size: 2rem;
+
+  &.dark-blue {
+    -webkit-text-stroke-color: $dark-blue;
+    text-stroke-color: $dark-blue;
+
+  }
 }
 
 

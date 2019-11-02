@@ -33,12 +33,25 @@ class AboutPage extends React.Component {
         <div id="about-page" className="fullwidth-container">
 
         <div onClick={this.toggleContent} className={`${this.state.showDetails ? 'show-details' : 'hide-details'} creative-studio text-anim`}>
-          studio de création
+          <h6>studio de création</h6>
+          <p>c'est à dire qu'on est capable de fabriquer un projet de a à z, que ce soit du brand, du print, de la création de contenu</p>
+          <p>ok d'accord c'est cool</p>
         </div>
 
         <div className="fixed-content fullwidth fullheight">
 
-          <p>cdltbisou est un <span className="text-stroked reveal-content" onClick={this.toggleContent}>studio de création</span> et une agence de développement web</p>
+
+        <div className="about-content">
+          <p>cdltbisou est un
+            <span
+            className="text-stroked dark-blue toggle-content"
+            onClick={this.toggleContent}>
+              studio de création
+            </span>
+             et de développement web basé à montréal (parce que l'hiver y est chouette) mais tout à fait capable de travailler dans la monde entier (parce que 2019 et Internet).
+          </p>
+        </div>
+
         </div>
 
         </div>

@@ -8,6 +8,14 @@
   }
 }
 
+.about-content {
+  padding: 0 24px;
+}
+
+.toggle-content {
+  margin: 0 4px;
+}
+
 .hide-details {
   display: none;
 }
@@ -17,7 +25,8 @@
   height: 100vh;
   position: fixed;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   top: 0;
   left: 0;
   z-index: 400;
@@ -32,17 +41,24 @@
   animation-fill-mode: forwards;
   animation-play-state: running;
 
-  &:after {
+  h6 {
+    // margin-top: 32px;
+    margin: 32px 0 0 0;
+    position: relative;
+  }
+
+  h6:after {
     content: "";
     position: absolute;
-    top: 180px;
-    right: 15%;
-    animation: drawingLine 1.2s ease 1.6s 1 forwards;
+    top: 32px;
+    right: 0;
+    animation: drawingLine 1.2s ease 0.3s 1 forwards;
+  }
+
+  p {
+    margin-top: 40px;
   }
 }
-
-
-
 
 
 @keyframes textAnim {
@@ -55,8 +71,8 @@
 
   100% {
     opacity: 1;
-    background: rgba(255,255,255,0.8);
-    font-size: 12rem;
+    background: rgba(255,255,255,0.98);
+    font-size: 3.2rem;
     font-weight: bold;
   }
 }
@@ -68,11 +84,16 @@
   }
 
   100% {
-    width: 70%;
+    width: 100%;
     height: 4px;
     background: $dark-blue;
   }
 }
+
+
+
+
+
 
 
 @media (min-width: $sm-screen) {
@@ -82,6 +103,35 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
+
+  @keyframes textAnim {
+    0% {
+      // letter-spacing: -0.25rem;
+      opacity: 0;
+      background: transparent;
+      font-size: 1.6rem;
+    }
+
+    100% {
+      opacity: 1;
+      background: rgba(255,255,255,0.8);
+      font-size: 12rem;
+      font-weight: bold;
+    }
+  }
+
+  @keyframes drawingLine {
+    0% {
+      width: 0;
+      height: 4px;
+    }
+
+    100% {
+      width: 70%;
+      height: 4px;
+      background: $dark-blue;
+    }
+  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {
